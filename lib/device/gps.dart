@@ -1,13 +1,21 @@
-import 'package:f_gps_tracker/domain/use_cases/gps_manager.dart';
 import 'package:geolocator/geolocator.dart';
 
 
 class GpsSensor {
-  Future<LocationPermission> get permissionStatus async => Geolocator.checkPermission();// Usando GeoLocator verifica el estado de los permisos
+  Future<LocationPermission> get permissionStatus async => 
+      await Geolocator.checkPermission();// Usando GeoLocator verifica el estado de los permisos
 
-  Future<Position> get currentLocation async => Geolocator.getCurrentPosition();// Usando GeoLocator obten la posicion actual
+  Future<Position> get currentLocation async => 
+      await Geolocator.getCurrentPosition();// Usando GeoLocator obten la posicion actual
 
-  Future<LocationAccuracyStatus> get locationAccuracy async => Geolocator.getLocationAccuracy();// Usando GeoLocator verifica la precision de la ubicacion con soporte para web
+  Future<LocationAccuracyStatus> get locationAccuracy async {
+    try{
+      return await Geolocator.getLocationAccuracy();// Usando GeoLocator verifica la precision de la ubicacion con soporte para web
+    }
+    catch(e){
+      return LocationAccuracyStatus.unknown;
+    }  
+  }
 
   Future<LocationPermission> requestPermission() async {
     //ignore:todo
@@ -24,6 +32,6 @@ class GpsSensor {
 
     //ignore:todo
     // [x]TODO: Usando GeoLocator solicita los permisos
-    return await GpsManager.requestPermission();
+    return await Geolocator.requestPermission();
   }
 }
