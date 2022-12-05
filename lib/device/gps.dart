@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:f_gps_tracker/domain/use_cases/gps_manager.dart';
 import 'package:geolocator/geolocator.dart';
 
