@@ -60,6 +60,7 @@ class LocationController extends GetxController {
   }
 
   Future<void> deleteAll() async {
+    //ignore: todo
     /* [x] TODO: Con [LocationManager.deleteAll] elimina todas las ubicaciones guardas y asigna una lista vacia a [_locations.value] */
     await LocationManager.deleteAll();
     _locations.value = [];

@@ -69,7 +69,6 @@ class _LocationState extends State<PermissionPage> {
                         _permissionStatus = controller.requestPermission();
                         //ignore: todo
                         // IGNORE TODO: y setState para que el FutureBuilder vuelva a renderizarse.
-                        
                       });
                     },
                     child: const Text("Solicitar Permisos")),

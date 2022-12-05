@@ -1,5 +1,4 @@
 import 'package:f_gps_tracker/data/repositories/database.dart';
-
 import '../models/location.dart';
 
 abstract class LocationManager {

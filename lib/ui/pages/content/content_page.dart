@@ -27,6 +27,7 @@ class ContentPage extends GetView<LocationController> {
                     padding: const EdgeInsets.symmetric(vertical: 16.0),
                     child: ElevatedButton(
                       onPressed: () async {
+                        //ignore: todo
                         /* [x] TODO: 1. Obten la ubicacion actual con gpsController.currentLocation
                         //       2. Obten la precision de la lectura con gpsController.locationAccuracy.
                         //       3. Crea un objeto [TrackedLocation] con fecha actual [DateTime.now] y la precisio como texto [accuracy.name]
