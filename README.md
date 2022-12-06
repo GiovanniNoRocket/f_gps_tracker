@@ -5,5 +5,5 @@ Aplicación de registro de ubicación usando la Hive y GeoLocator basados en el 
 
 Funcional con Android,y Web
 
-![Chat](https://imgur.com/xeHuon6)
+!(image)(https://imgur.com/xeHuon6)
 
